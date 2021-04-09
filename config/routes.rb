@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'search/search'
   get 'relationships/create'
   get 'relationships/destroy'
   devise_for :users
@@ -13,4 +14,5 @@ Rails.application.routes.draw do
     get :follows, on: :member
     get :followers, on: :member
   end
+  get '/search', to: 'search#search'
 end
